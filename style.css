@@ -1,0 +1,116 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4da;
+    margin: 0;
+    padding: 20px;
+}
+.container{
+    max-width: 800px;
+    margin: auto;
+    background: rgb(240, 236, 233);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(25, 25, 26, 0.938);
+}
+
+h1, h2{
+    text-align: center;
+
+}
+.table-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.table{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: 1px solid #141413;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.table img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.table-name{
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: rgb(205, 212, 216);
+    padding: 5px 0;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.button{
+    position: absolute;
+    bottom: 5px;
+    background-color: rgb(69, 212, 69);
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+.occupied-label {
+    text-align: center;
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+
+.button:hover{
+    background-color: #218838;
+}
+
+#reserveButton:hover {
+    background-color: #898f8a;
+}
+#reportButton {
+    background-color: #cdd3d4;
+    margin-right: 0;
+}
+#reportButton:hover {
+    background-color: #585a5a;
+}
+#reportOutput {
+    white-space: pre-wrap;
+    background-color: #fdfcfc;
+    border: 1px solid #ccc;
+    padding: 15px 20px;
+    border-radius: 8px;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    font-family: monospace;
+    font-size: 0.95rem;
+    color: #111111;
+}
+
+@media (max-width: 600px) {
+    #availableTables, #occupiedTables {
+        justify-content: center;
+    }
+    .table {
+        width: 45%;
+    }
+    #reserveButton, #reportButton {
+        width: 100%;
+        margin: 8px 0;
+    }
+}
