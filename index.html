@@ -1,32 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Tareas</title>
     <link rel="stylesheet" href="style.css">
-    <title>Reservas de Mesas</title>
 </head>
 <body>
     <div class="container">
-        <h1>Reserva de Mesas en el Restaurante</h1>
+        <h1>Gestor de Tareas</h1>
+        <form id="taskForm">
+            <input type="text" id="taskName" placeholder="Nombre de la tarea" required>
+            <input type="datetime-local" id="taskDate" required>
+            <button type="submit">Agregar Tarea</button>
+        </form>
 
-        <h2>Mesas Dísponibles</h2>
-        <div id="availableTables" class="table-list"></div>
-
-
-        <h2>Mesas Ocupadas</h2>
-        <div id="occupiedTables" class="table-list"></div>
-
-         <h2>Realizar Reserva</h2>
-        <input type="text" id="customerName" placeholder="Nombre del Cliente">
-        <input type="number" id="tableNumber" placeholder="Numero de Mesas" min="1" max="12">
-        <input type="date" id="reservationDate" />
-        <input type="time" id="reservationTime" />
-        <button id="reserveButton">Reservar Mesa</button>
-
-        <h2>Emitir Reporte de Reservas</h2>
-        <button id="reportButton">Generar Reporte</button>
-        <pre id="reportOutput"></pre>
+        <h2>Tareas</h2>
+        <ul id="taskList"></ul>
+        <p id="noTasksMessage" style="display: none;">No tienes tareas pendientes.</p>
     </div>
 
     <script src="script.js"></script>
